@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C8685713236CCF1A008EFE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685712236CCF1A008EFE32 /* AppDelegate.swift */; };
-		C8685715236CCF1A008EFE32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685714236CCF1A008EFE32 /* ViewController.swift */; };
+		C8685715236CCF1A008EFE32 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685714236CCF1A008EFE32 /* GameViewController.swift */; };
 		C8685718236CCF1A008EFE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8685716236CCF1A008EFE32 /* Main.storyboard */; };
 		C868571A236CCF1B008EFE32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8685719236CCF1B008EFE32 /* Assets.xcassets */; };
 		C868571D236CCF1B008EFE32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C868571B236CCF1B008EFE32 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		C8685736236CCF1B008EFE32 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685735236CCF1B008EFE32 /* InterfaceController.swift */; };
 		C8685738236CCF1B008EFE32 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685737236CCF1B008EFE32 /* ExtensionDelegate.swift */; };
 		C868573A236CCF1C008EFE32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8685739236CCF1C008EFE32 /* Assets.xcassets */; };
+		C868574A236CD19A008EFE32 /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8685749236CD19A008EFE32 /* SushiPiece.swift */; };
+		C868574C236CD322008EFE32 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C868574B236CD322008EFE32 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,7 @@
 /* Begin PBXFileReference section */
 		C868570F236CCF1A008EFE32 /* Sushi_watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushi_watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8685712236CCF1A008EFE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8685714236CCF1A008EFE32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8685714236CCF1A008EFE32 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C8685717236CCF1A008EFE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8685719236CCF1B008EFE32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C868571C236CCF1B008EFE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		C8685737236CCF1B008EFE32 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C8685739236CCF1C008EFE32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C868573B236CCF1C008EFE32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8685749236CD19A008EFE32 /* SushiPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
+		C868574B236CD322008EFE32 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +128,13 @@
 			isa = PBXGroup;
 			children = (
 				C8685712236CCF1A008EFE32 /* AppDelegate.swift */,
-				C8685714236CCF1A008EFE32 /* ViewController.swift */,
+				C8685714236CCF1A008EFE32 /* GameViewController.swift */,
 				C8685716236CCF1A008EFE32 /* Main.storyboard */,
 				C8685719236CCF1B008EFE32 /* Assets.xcassets */,
 				C868571B236CCF1B008EFE32 /* LaunchScreen.storyboard */,
 				C868571E236CCF1B008EFE32 /* Info.plist */,
+				C8685749236CD19A008EFE32 /* SushiPiece.swift */,
+				C868574B236CD322008EFE32 /* GameScene.swift */,
 			);
 			path = Sushi_watch;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8685715236CCF1A008EFE32 /* ViewController.swift in Sources */,
+				C868574A236CD19A008EFE32 /* SushiPiece.swift in Sources */,
+				C8685715236CCF1A008EFE32 /* GameViewController.swift in Sources */,
+				C868574C236CD322008EFE32 /* GameScene.swift in Sources */,
 				C8685713236CCF1A008EFE32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
