@@ -8,8 +8,21 @@
 import Foundation
 import SpriteKit
 import GameplayKit
-
-class GameScene: SKScene {
+import WatchConnectivity
+class GameScene: SKScene,WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    
+    }
+    
+  
     
     let cat = SKSpriteNode(imageNamed: "character1")
     let sushiBase = SKSpriteNode(imageNamed:"roll")
@@ -27,6 +40,11 @@ class GameScene: SKScene {
     var score = 0
     
     
+    
+
+    
+    
+   
     func spawnSushi() {
         
         // -----------------------
@@ -59,6 +77,22 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        
+        print(" APP Is Working!")
+        // Do any additional setup after loading the view.
+        
+        if (WCSession.isSupported() == true) {
+       print("WC is supported!")
+            
+        // create a communication session with the watch
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        else {
+           print("WC NOT supported!")
+        }
+        
         // add background
         let background = SKSpriteNode(imageNamed: "background")
         background.size = self.size
