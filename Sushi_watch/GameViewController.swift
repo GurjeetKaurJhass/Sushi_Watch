@@ -25,8 +25,5 @@ class GameViewController: UIViewController {
         skView.showsPhysics = true
         
         skView.presentScene(scene)
-        
     }
-    
-    
 }

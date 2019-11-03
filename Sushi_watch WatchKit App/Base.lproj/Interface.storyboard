@@ -12,16 +12,72 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sushi_watch_WatchKit_App" customModuleProvider="target">
+                <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sushi_watch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="gcF-Vp-sLu"/>
+                        <group width="1" alignment="left" id="CRZ-k7-j2Q">
+                            <items>
+                                <label width="111" height="27" alignment="left" text="Label" id="gcF-Vp-sLu">
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </label>
+                                <button width="20" height="20" alignment="left" backgroundImage="pause" id="k1n-Jg-lwP">
+                                    <connections>
+                                        <action selector="pause" destination="AgC-eL-Hgc" id="DJB-rL-n7q"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="5gT-iN-k7O">
+                            <items>
+                                <label width="136" alignment="left" text="score/lives" id="nec-9j-LRY">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ANC-FO-N50">
+                            <items>
+                                <button width="63" alignment="left" title="Gain Power" id="wMe-vf-ZPF">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="1" green="0.54912265920000003" blue="0.38660163120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="power" destination="AgC-eL-Hgc" id="abA-Ix-M5x"/>
+                                    </connections>
+                                </button>
+                                <imageView width="51" alignment="left" id="HMH-7W-eKr"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="eoI-Md-6uE">
+                            <items>
+                                <button width="38" height="40" alignment="center" semanticContentAttribute="forceLeftToRight" backgroundImage="left-arrow" id="uFO-Wb-W7Z">
+                                    <accessibilityTraits key="accessibilityTraits" button="YES" image="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <variation key="device=watch40mm">
+                                        <accessibilityTraits key="accessibilityTraits" notEnabled="YES"/>
+                                    </variation>
+                                    <connections>
+                                        <action selector="moveCatLeft" destination="AgC-eL-Hgc" id="dr2-Wp-LlZ"/>
+                                    </connections>
+                                </button>
+                                <button width="36" height="40" alignment="center" semanticContentAttribute="forceRightToLeft" backgroundImage="right-arrow" id="rZX-KZ-TIm">
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <connections>
+                                        <action selector="moveCatRight" destination="AgC-eL-Hgc" id="rMm-aU-bCU"/>
+                                    </connections>
+                                </button>
+                                <imageView width="80" height="73" alignment="center" semanticContentAttribute="forceLeftToRight" image="battery (3)" contentMode="TopLeft" id="5wG-Wg-9aI"/>
+                            </items>
+                        </group>
                     </items>
+                    <color key="backgroundColor" red="0.80498614878323149" green="0.95523184537887573" blue="0.76311869291668333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <connections>
                         <outlet property="msgfromPhoneLabel" destination="gcF-Vp-sLu" id="Irq-dq-3p6"/>
+                        <outlet property="power1" destination="wMe-vf-ZPF" id="PE2-I2-zlg"/>
+                        <outlet property="powerLeft" destination="5wG-Wg-9aI" id="c5i-94-G4r"/>
+                        <outlet property="powerUp" destination="HMH-7W-eKr" id="gF4-h8-mka"/>
+                        <outlet property="scoreLives" destination="nec-9j-LRY" id="bbb-r3-bk7"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-72" y="20"/>
+            <point key="canvasLocation" x="-384" y="-55.5"/>
         </scene>
     </scenes>
 </document>

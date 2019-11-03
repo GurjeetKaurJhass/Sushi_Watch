@@ -131,8 +131,8 @@
 				C8685714236CCF1A008EFE32 /* GameViewController.swift */,
 				C8685716236CCF1A008EFE32 /* Main.storyboard */,
 				C8685719236CCF1B008EFE32 /* Assets.xcassets */,
-				C868571B236CCF1B008EFE32 /* LaunchScreen.storyboard */,
 				C868571E236CCF1B008EFE32 /* Info.plist */,
+				C868571B236CCF1B008EFE32 /* LaunchScreen.storyboard */,
 				C8685749236CD19A008EFE32 /* SushiPiece.swift */,
 				C868574B236CD322008EFE32 /* GameScene.swift */,
 			);
